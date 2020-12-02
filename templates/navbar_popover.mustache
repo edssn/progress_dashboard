@@ -44,9 +44,9 @@
 {{/ core/popover_region }}
 
 {{#js}}
-    require(['jquery', 'core/popover_region_controller'], function($, controller) {
+require(['jquery', 'core/popover_region_controller'], function($, controller) {
     var container = $('#nav-progress-dashboard-popover-container');
     var controller = new controller(container);
     controller.registerListNavigationEventListeners();
-    });
+});
 {{/js}}

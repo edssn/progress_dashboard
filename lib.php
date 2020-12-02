@@ -30,15 +30,103 @@ function local_progress_dashboard_render_navbar_output(\renderer_base $renderer)
 
     $items = [];
 
-    $url = new moodle_url('/local/progress_dashboard/setweeks.php?courseid='.$COURSE->id);
+    $url = new moodle_url('/local/progress_dashboard/graph1.php?courseid='.$COURSE->id);
     //die($url);
 
+    // semanas
     $item = new stdClass();
-    $item->name = 'Gráfico 1';
+    $item->name = 'Configurar Semanas';
     $item->url = $url;
+    array_push($items, $item);
 
-    //die($item->name);
+    // grafico 1
+    $item = new stdClass();
+    $item->name = 'PD.1.';
+    $item->url = $url;
+    array_push($items, $item);
 
+    // grafico 2
+    $item = new stdClass();
+    $item->name = 'PD.2.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 3
+    $item = new stdClass();
+    $item->name = 'PD.3.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 4
+    $item = new stdClass();
+    $item->name = 'PD.4.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 5
+    $item = new stdClass();
+    $item->name = 'PD.5.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 6
+    $item = new stdClass();
+    $item->name = 'PD.6.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 7
+    $item = new stdClass();
+    $item->name = 'PD.7.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 8
+    $item = new stdClass();
+    $item->name = 'PD.8.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 9
+    $item = new stdClass();
+    $item->name = 'PD.9.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 10
+    $item = new stdClass();
+    $item->name = 'PD.10.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 11
+    $item = new stdClass();
+    $item->name = 'PD.11.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 12
+    $item = new stdClass();
+    $item->name = 'PD.12.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 13
+    $item = new stdClass();
+    $item->name = 'PD.13.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 14
+    $item = new stdClass();
+    $item->name = 'PD.14.';
+    $item->url = $url;
+    array_push($items, $item);
+
+    // grafico 15
+    $item = new stdClass();
+    $item->name = 'PD.15.';
+    $item->url = $url;
     array_push($items, $item);
 
     $params = [
@@ -51,6 +139,6 @@ function local_progress_dashboard_render_navbar_output(\renderer_base $renderer)
 
 function local_progress_dashboard_get_fontawesome_icon_map() {
     return [
-        'local_progress_dashboard:icon' => 'fa-bar-chart',
+        'local_progress_dashboard:icon' => 'fa-pie-chart',
     ];
 }

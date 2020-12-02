@@ -25,8 +25,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['mycustomstring'] = 'You can add \'extra\' strings via the recipe file.';
-$string['mycustomstring2'] = 'Another string with {$a->some} placeholder.';
 $string['pluginname'] = 'Progress Dashboard';
 
 /* Menú */
