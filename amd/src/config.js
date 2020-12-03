@@ -13,7 +13,6 @@ define([],function() {
         shim: {
             'vue' : {exports: 'vue'},
             'vuetify': {deps: ['vue'] , exports: 'vuetify'},
-
         }
     });
 });
