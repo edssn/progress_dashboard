@@ -8,7 +8,7 @@ define([],function() {
         paths: {
             "vue" : M.cfg.wwwroot + '/local/progress_dashboard/js/vue',
             "vuetify" : M.cfg.wwwroot + '/local/progress_dashboard/js/vuetify',
-            "highcharts": M.cfg.wwwroot + '/local/progress_dashboard/js/'
+            "highcharts": M.cfg.wwwroot + '/local/progress_dashboard/js/highcharts/'
         },
         shim: {
             'vue' : {exports: 'vue'},
