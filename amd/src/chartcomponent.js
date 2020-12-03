@@ -1,23 +1,13 @@
 define(['highcharts'], function(Highcharts) {
-    console.log({message: 'entrando chartcomponent'});
-    console.log({Highcharts});
-    const chartcomponent = {
+    return {
         template: `<div id="container"></div>`,
-        props: ['type', 'data', 'options'],
+        props: ['chart'],
         mounted() {
-            console.log({message: 'entrando mounted  chartcomponent'});
+            console.log(this.chart);
             this._highchart = Highcharts.chart(this.$el, {
-                chart: {
-                    type: 'pie',
-                    options3d: {
-                        enabled: true,
-                        alpha: 45,
-                        beta: 0
-                    }
-                },
-                title: {
-                    text: 'Browser market shares at a specific website, 2014'
-                },
+                chart: this.chart.chart,
+                title: this.chart.title,
+                subtitle: this.chart.subtitle,
                 accessibility: {
                     point: {
                         valueSuffix: '%'
@@ -52,10 +42,11 @@ define(['highcharts'], function(Highcharts) {
                         ['Opera', 6.2],
                         ['Others', 0.7]
                     ]
-                }]
+                }],
+                credits: {
+                    enabled: false
+                },
             });
         },
     };
-    console.log(chartcomponent);
-    return chartcomponent;
 });

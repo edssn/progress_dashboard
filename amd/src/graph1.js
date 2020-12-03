@@ -8,13 +8,12 @@ define(["local_progress_dashboard/vue",
 
         function init(content) {
 
-            console.log(wwwroot);
-            console.log({message: 'entrando a init de graph1'});
+            console.log({content});
+            console.log(content.chart.chart);
+            console.log(content.chart.title);
 
             Vue.use(Vuetify);
             Vue.component('chart', Chart);
-
-            console.log({message: 'luego de cargar vue y chart'});
 
             new Vue({
                 delimiters: ["[[", "]]"],
@@ -22,12 +21,10 @@ define(["local_progress_dashboard/vue",
                 vuetify: new Vuetify(),
                 data() {
                     return {
-
+                        chart: content.chart,
                     };
                 },
                 mounted() {
-                    console.log({loader: document.querySelector("#pd-loader")});
-                    console.log({graph1: document.querySelector("#graph1")});
                     document.querySelector("#pd-loader").style.display = "none";
                     document.querySelector("#graph1").style.display = "block";
                 },
@@ -35,7 +32,6 @@ define(["local_progress_dashboard/vue",
                 }
             });
 
-            console.log({message: 'saliendo'});
         }
 
         return {

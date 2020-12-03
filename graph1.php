@@ -14,8 +14,26 @@ $PAGE->set_title('Título');
 $PAGE->set_pagelayout('standard');
 $PAGE->set_heading($course->fullname);
 
+
+$chart = array(
+    "chart" => array(
+        "type" => "pie",
+        "options3d" => array(
+            "enabled" => true,
+            "alpha" => 45,
+            "beta" => 0,
+        ),
+    ),
+    "title" => array(
+        "text" => "Titulo de Gráfico"
+    ),
+    "subtitle" => array(
+        "text" => "Subtitulo de Gráfico"
+    )
+);
+
 $content = array(
-    "data" => [],
+    "chart" => $chart,
     "options" => [],
 );
 
