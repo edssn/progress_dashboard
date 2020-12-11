@@ -7,10 +7,7 @@ define(["local_progress_dashboard/vue",
         var wwwroot = M.cfg.wwwroot;
 
         function init(content) {
-
-            console.log({content});
-            console.log(content.chart.chart);
-            console.log(content.chart.title);
+            console.log({chart: content.chart});
 
             Vue.use(Vuetify);
             Vue.component('chart', Chart);

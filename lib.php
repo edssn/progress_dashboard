@@ -47,8 +47,9 @@ function local_progress_dashboard_render_navbar_output(\renderer_base $renderer)
 
     // grafico 2
     $item = new stdClass();
+    $url2 = new moodle_url('/local/progress_dashboard/graph2.php?courseid='.$COURSE->id);
     $item->name = 'PD.2.';
-    $item->url = $url;
+    $item->url = $url2;
     array_push($items, $item);
 
     // grafico 3
