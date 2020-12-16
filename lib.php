@@ -30,6 +30,12 @@ function local_progress_dashboard_render_navbar_output(\renderer_base $renderer)
 
     $items = [];
 
+    if (isset($COURSE) && $COURSE->id <= 1 ) {
+        return null;
+    }
+
+    $configweeks = new local_progress_dashboard_configweeks($COURSE, $USER);
+
     $url = new moodle_url('/local/progress_dashboard/graph1.php?courseid='.$COURSE->id);
     //die($url);
 
